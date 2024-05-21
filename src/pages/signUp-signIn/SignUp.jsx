@@ -1,0 +1,92 @@
+import { useState } from "react";
+import { CustomInput } from "../../components/CustomInput";
+import { DefaultLayout } from "../../layouts/DefaultLayout";
+import { Button, Col, Form, Row } from "react-bootstrap";
+import { postNewUser } from "../../helper/userAxios";
+import { toast } from "react-toastify";
+
+const SignUp = () => {
+  const [form, setForm] = useState({});
+  const inputs = [
+    {
+      label: "Name",
+      name: "name",
+      type: "text",
+      placeholder: "James Bond",
+      required: true,
+    },
+    {
+      label: "Email",
+      name: "email",
+      type: "email",
+      placeholder: "james.bond@gmail.com",
+      required: true,
+    },
+    {
+      label: "Phone",
+      name: "phone",
+      type: "number",
+      placeholder: "0845000589",
+      required: false,
+    },
+    {
+      label: "Password",
+      name: "password",
+      type: "password",
+      placeholder: "******",
+      required: true,
+    },
+    {
+      label: "Confirm Password",
+      name: "confirmPassword",
+      type: "password",
+      placeholder: "******",
+      required: true,
+    },
+  ];
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    const { confirmPassword, ...rest } = form;
+    if (confirmPassword !== rest.password) {
+      return alert("Passwords donot match");
+    }
+
+    const responsePending = postNewUser(rest);
+    toast.promise(responsePending, {
+      pending: "Please Wait ....",
+    });
+
+    const { status, message } = await responsePending;
+    toast[status](message);
+  };
+  return (
+    <div>
+      <DefaultLayout>
+        <Row className="mb-5">
+          <Col className="d-flex">
+            <Form
+              onSubmit={handleOnSubmit}
+              className="m-auto mt-5  justify-content-center rounded border-black shadow-lg p-5"
+              style={{ width: "450px" }}
+            >
+              <h1>Sign Up</h1>
+              <hr />
+              {inputs.map((input, i) => (
+                <CustomInput key={i} {...input} onChange={handleOnChange} />
+              ))}
+              <div>
+                <Button type="submit">Submit</Button>
+              </div>
+            </Form>
+          </Col>
+        </Row>
+      </DefaultLayout>
+    </div>
+  );
+};
+
+export default SignUp;
