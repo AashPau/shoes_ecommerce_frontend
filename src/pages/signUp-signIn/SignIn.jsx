@@ -72,7 +72,7 @@ const SignIn = () => {
               className="m-auto mt-5  justify-content-center rounded border-black shadow-lg p-5"
               style={{ width: "450px" }}
             >
-              <h1>Sign Up</h1>
+              <h1>Sign In</h1>
               <hr />
               {inputs.map((input, i) => (
                 <CustomInput key={i} {...input} />

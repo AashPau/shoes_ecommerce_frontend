@@ -12,8 +12,8 @@ import { useSelector } from "react-redux";
 const sideLinks = [
   {
     icon: <FaBookBookmark />,
-    title: "Books",
-    to: "/admin/books",
+    title: "Shoes",
+    to: "/admin/shoes",
     isAdminOnly: true,
   },
   {
