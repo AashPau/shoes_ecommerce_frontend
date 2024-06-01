@@ -1,12 +1,14 @@
-import { useState } from "react";
-import { CustomInput } from "../../components/CustomInput";
-import { DefaultLayout } from "../../layouts/DefaultLayout";
+import { CustomInput } from "../../components/customInput/CustomInput";
+import { DefaultLayout } from "../../components/layouts/DefaultLayout";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { postNewUser } from "../../helper/userAxios";
 import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { setForm } from "./formSlice";
 
 const SignUp = () => {
-  const [form, setForm] = useState({});
+  const dispatch = useDispatch();
+  const { form } = useSelector((state) => state.formInfo);
   const inputs = [
     {
       label: "Name",
@@ -46,7 +48,7 @@ const SignUp = () => {
   ];
   const handleOnChange = (e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    dispatch(setForm({ ...form, [name]: value }));
   };
   const handleOnSubmit = async (e) => {
     e.preventDefault();
@@ -63,6 +65,7 @@ const SignUp = () => {
     const { status, message } = await responsePending;
     toast[status](message);
   };
+
   return (
     <div>
       <DefaultLayout>

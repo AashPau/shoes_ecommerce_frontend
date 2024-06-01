@@ -1,12 +1,18 @@
-import { useRef } from "react";
-import { CustomInput } from "../../components/CustomInput";
-import { DefaultLayout } from "../../layouts/DefaultLayout";
+import { useRef, useEffect } from "react";
+import { CustomInput } from "../../components/customInput/CustomInput";
+import { DefaultLayout } from "../../components/layouts/DefaultLayout";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { toast } from "react-toastify";
+import { signInUser } from "../../helper/userAxios";
+import { getUserObj } from "../../features/users/userAction";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const dispatch = useDispatch();
   const emailRef = useRef("");
   const passRef = useRef("");
+  const navigate = useNavigate();
   const inputs = [
     {
       label: "Email",
@@ -26,15 +32,34 @@ const SignIn = () => {
     },
   ];
 
-  const handleOnSubmit = (e) => {
+  const { user } = useSelector((state) => state.userInfo);
+  console.log(user);
+
+  useEffect(() => {
+    user?._id && navigate("/dashboard");
+  }, [user?._id, navigate]);
+
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
     const password = passRef.current.value;
-    console.log(email, password);
+    // console.log(email, password);
     if (!email || !password) {
       return toast.error("Both field must be filled");
     } else {
-      toast("everything good till here");
+      const { status, message, tokens } = await signInUser({ email, password });
+      toast[status](message);
+      //store tokens in the session
+      sessionStorage.setItem("accessJWT", tokens.accessJWT);
+      localStorage.setItem("refreshJWT", tokens.refreshJWT);
+
+      // result?.status === "success"
+      //   ? toast.success("SignIn successful")
+      //   : toast.error("SignIn unsuccessful, please try again");
+
+      if (status === "success") {
+        dispatch(getUserObj());
+      }
     }
   };
   return (

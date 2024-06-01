@@ -1,13 +1,21 @@
 import axios from "axios";
 
-export const apiProcesser = async ({ method, url, data }) => {
+const getAccessJWT = () => {
+  return sessionStorage.getItem("accessJWT");
+};
+
+export const apiProcesser = async ({ method, url, data, isPrivate }) => {
+  const headers = {
+    Authorization: isPrivate ? getAccessJWT() : null,
+  };
   try {
     const response = await axios({
       method,
       url,
       data,
+      headers,
     });
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   } catch (error) {
     return {
