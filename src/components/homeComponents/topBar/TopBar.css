@@ -1,0 +1,24 @@
+/* TopBar.css */
+
+.slantedbox {
+  position: relative;
+  background: yellow;
+  display: inline-block;
+  color: black;
+  padding: 0.5em 1em; /* Adjust padding as needed */
+  overflow: hidden; /* Hide overflowing content */
+
+  /* Add the slant effect using a pseudo-element */
+}
+.slantedbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transform: skewX(-10deg); /* Adjust the angle as needed */
+  transform-origin: top left; /* Set the origin for the skew */
+  z-index: -1;
+}
