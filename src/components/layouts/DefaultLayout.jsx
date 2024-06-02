@@ -1,9 +1,11 @@
 import { Header } from "../layouts/Header";
 import { Footer } from "../layouts/Footer";
+import { TopBar } from "../homeComponents/topBar/TopBar";
 
 export const DefaultLayout = ({ children }) => {
   return (
     <div>
+      <TopBar />
       {/* header  */}
       <Header />
       {/* body  */}
