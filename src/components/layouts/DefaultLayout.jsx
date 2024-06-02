@@ -7,7 +7,7 @@ export const DefaultLayout = ({ children }) => {
       {/* header  */}
       <Header />
       {/* body  */}
-      <main className="main">{children}</main>
+      <main className="main min-vh-80">{children}</main>
       {/* footer  */}
       <Footer />
     </div>
