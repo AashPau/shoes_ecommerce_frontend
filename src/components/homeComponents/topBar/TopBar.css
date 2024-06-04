@@ -5,14 +5,12 @@
   background: yellow;
   display: inline-block;
   color: black;
-  padding: 0.5em 1em; /* Adjust padding as needed */
-  overflow: hidden; /* Hide overflowing content */
-
-  /* Add the slant effect using a pseudo-element */
+  padding-left: 1em;
 }
-.slantedbox::before {
-  content: "";
+.slantedbox:before {
+  content: "Login Or Register";
   position: absolute;
+  padding-left: 1em;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,5 +18,4 @@
   background-color: inherit;
   transform: skewX(-10deg); /* Adjust the angle as needed */
   transform-origin: top left; /* Set the origin for the skew */
-  z-index: -1;
 }

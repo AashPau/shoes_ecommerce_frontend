@@ -4,14 +4,12 @@ import { DefaultLayout } from "../../components/layouts/DefaultLayout";
 
 const Home = () => {
   return (
-    <div>
-      <DefaultLayout>
-        {/* <CarouselSlider /> */}
-        <div className="min-vh-100">
-          <SwiperSlider />
-        </div>
-      </DefaultLayout>
-    </div>
+    <DefaultLayout>
+      {/* <CarouselSlider /> */}
+      <div className="min-vh-100">
+        <SwiperSlider />
+      </div>
+    </DefaultLayout>
   );
 };
 

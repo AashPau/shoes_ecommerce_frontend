@@ -8,6 +8,7 @@ export const DefaultLayout = ({ children }) => {
       <TopBar />
       {/* header  */}
       <Header />
+
       {/* body  */}
       <main className="main min-vh-80">{children}</main>
       {/* footer  */}
