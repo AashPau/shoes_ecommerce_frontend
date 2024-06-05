@@ -1,6 +1,6 @@
 import { Header } from "../layouts/Header";
 import { Footer } from "../layouts/Footer";
-import { TopBar } from "../homeComponents/topBar/TopBar";
+import { TopBar } from "./topBar/TopBar";
 
 export const DefaultLayout = ({ children }) => {
   return (

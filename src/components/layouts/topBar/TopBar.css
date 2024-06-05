@@ -6,11 +6,13 @@
   display: inline-block;
   color: black;
   padding-left: 1em;
+  z-index: 2;
 }
 .slantedbox:before {
-  content: "Login Or Register";
+  content: "";
   position: absolute;
   padding-left: 1em;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;

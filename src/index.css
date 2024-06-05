@@ -1,3 +1,12 @@
 .min-vh-80 {
   min-height: 87.7dvh;
 }
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+.roboto-condensed-font {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}

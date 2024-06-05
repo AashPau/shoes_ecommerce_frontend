@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ImLocation } from "react-icons/im";
 import { GiShoppingBag } from "react-icons/gi";
 import { FiSearch } from "react-icons/fi";
+import "./Header.css";
 
 const navTopics = [
   "WOMENS",
@@ -17,7 +18,10 @@ const navTopics = [
 ];
 export const Header = () => {
   return (
-    <Navbar expand="md" className="d-flex align-items-baseline px-3 gap-3">
+    <Navbar
+      expand="md"
+      className="d-flex align-items-baseline px-3 gap-3 roboto-condensed-font "
+    >
       <Link className="navbar-brand" to="/">
         Footwear
       </Link>
@@ -57,16 +61,18 @@ export const Header = () => {
           <FiSearch />
         </Button>
       </InputGroup>
-      <Nav>
-        <Link className="nav-link fs-3">
-          <ImLocation />
-        </Link>
-      </Nav>
-      <Nav>
-        <Link className="nav-link fs-3">
-          <GiShoppingBag />
-        </Link>
-      </Nav>
+      <Navbar.Collapse>
+        <Nav>
+          <Link className="nav-link fs-3">
+            <ImLocation />
+          </Link>
+        </Nav>
+        <Nav>
+          <Link className="nav-link fs-3">
+            <GiShoppingBag />
+          </Link>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 };
