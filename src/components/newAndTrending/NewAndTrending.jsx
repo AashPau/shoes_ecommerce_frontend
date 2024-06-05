@@ -1,20 +1,22 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import "./NewAndTrending.css";
 
 export const NewAndTrending = () => {
   return (
     <>
-      <Row className="m-2">
-        <Col className="text-center fw-bolder">New & Trending</Col>
+      <Row className="m-2 my-4">
+        <Col className="text-center roboto-condensed-font fs-2">
+          NEW & TRENDING
+        </Col>
       </Row>
-      <Row className="d-flex justify-content-between gap-1">
-        <Col className="p-0 md-6">
-          <Card className="border-0">
+      <Row className="gap-2 d-flex justify-content-between">
+        <Col className="p-0 md-6 card-responsive">
+          <Card className="border-0 ">
             <img
-              src={`https://picsum.photos/seed/picsum/200`}
-              style={{ height: "50vh" }}
+              src={`https://picsum.photos/seed/picsum/600/450`}
+              // style={{ height: "50vh" }}
               className="card-img-top"
             />
             <Card.Body>
@@ -27,11 +29,10 @@ export const NewAndTrending = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col className="p-0 md-6">
+        <Col className="p-0 md-6 card-responsive">
           <Card className="border-0">
             <img
-              src={`https://picsum.photos/seed/picsum/200`}
-              style={{ height: "50vh" }}
+              src={`https://picsum.photos/600/450`}
               className="card-img-top"
             />
 

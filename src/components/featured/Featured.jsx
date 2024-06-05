@@ -2,19 +2,19 @@ import { Col, Container, Row, Button, Card } from "react-bootstrap";
 
 export const Featured = () => {
   return (
-    <Container className="my-4">
+    <div className="my-5">
       <Row>
-        <Col className="text-center  roboto-condensed-font fs-2">
-          Featured Offers
+        <Col className="text-center roboto-condensed-font fs-2">
+          FEATURED OFFERS
         </Col>
       </Row>
-      <Row className="g-2 mt-2">
-        <Col className="md-3">
-          <Card style={{ width: "18rem" }}>
+      <Row className="mt-3 ">
+        <Col className="md-3 d-flex justify-content-center">
+          <Card style={{ width: "28rem" }}>
             <div style={{ position: "relative" }}>
               <Card.Img
                 variant="top"
-                src={`https://picsum.photos/id/26/200/300`}
+                src={`https://picsum.photos/id/26/400/425`}
               />
               <div
                 style={{ position: "absolute", bottom: "0", right: "0" }}
@@ -33,11 +33,11 @@ export const Featured = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col className="md-3">
-          <Card style={{ width: "18rem" }}>
+        <Col className="md-3 d-flex justify-content-center">
+          <Card style={{ width: "28rem" }}>
             <Card.Img
               variant="top"
-              src={`https://picsum.photos/id/26/200/300`}
+              src={`https://picsum.photos/id/20/400/425`}
             />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -49,11 +49,11 @@ export const Featured = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col className="md-3">
-          <Card style={{ width: "18rem" }}>
+        <Col className="md-3 d-flex justify-content-center">
+          <Card style={{ width: "28rem" }}>
             <Card.Img
               variant="top"
-              src={`https://picsum.photos/id/26/200/300`}
+              src={`https://picsum.photos/id/16/400/425`}
             />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -65,11 +65,11 @@ export const Featured = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col className="md-3">
-          <Card style={{ width: "18rem" }}>
+        <Col className="md-3 d-flex justify-content-center">
+          <Card style={{ width: "28rem" }}>
             <Card.Img
               variant="top"
-              src={`https://picsum.photos/id/26/200/300`}
+              src={`https://picsum.photos/id/30/400/425`}
             />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -82,6 +82,6 @@ export const Featured = () => {
           </Card>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
