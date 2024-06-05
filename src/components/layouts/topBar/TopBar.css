@@ -18,6 +18,6 @@
   width: 100%;
   height: 100%;
   background-color: inherit;
-  transform: skewX(-10deg); /* Adjust the angle as needed */
+  transform: skewX(-15deg); /* Adjust the angle as needed */
   transform-origin: top left; /* Set the origin for the skew */
 }
