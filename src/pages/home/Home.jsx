@@ -5,7 +5,6 @@ import { DefaultLayout } from "../../components/layouts/DefaultLayout";
 import { SaleBar } from "../../components/layouts/saleBar/SaleBar";
 import { NewAndTrending } from "../../components/newAndTrending/NewAndTrending";
 import { ShopByCategory } from "../../components/shopbyCategory/ShopByCategory";
-import { TryBar } from "../../components/try/bryBar";
 
 const Home = () => {
   return (

@@ -30,7 +30,7 @@ export const Header = () => {
         <Nav className="ms-auto flex-fill">
           {navTopics.map((topic, i) => {
             return (
-              <Link className="nav-link" key={i} to="/">
+              <Link className="nav-link" key={i} to={"/" + topic}>
                 {topic}
               </Link>
             );
