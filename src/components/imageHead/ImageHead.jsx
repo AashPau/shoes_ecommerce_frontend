@@ -17,7 +17,7 @@ export const ImageHead = ({ backgroundImage, video, title }) => {
           </div>
         </Col>
         <Col className="d-flex align-items-center justify-content-center">
-          <div>
+          <div className="d-block">
             <video
               src={video}
               width="600"
