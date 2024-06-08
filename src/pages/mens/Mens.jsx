@@ -5,11 +5,13 @@ import { SwiperSlider } from "../../components/swiperSlider/SwiperSlider";
 import { NewAndTrending } from "../../components/newAndTrending/NewAndTrending";
 import { ShopByCategory } from "../../components/shopbyCategory/ShopByCategory";
 import { ImageHead } from "../../components/imageHead/ImageHead";
+import TopImageMen from "../../assets/images/Mens-VideoHeader-HomeOfFootball-d.jpg"; // Import the image directly
+import Jelly from "../../assets/videos/jellyfish.mp4";
 
 export const Mens = () => {
   return (
     <DefaultLayout>
-      <ImageHead />
+      <ImageHead backgroundImage={TopImageMen} video={Jelly} />
       <Featured />
       <SwiperSlider />
       <NewAndTrending />

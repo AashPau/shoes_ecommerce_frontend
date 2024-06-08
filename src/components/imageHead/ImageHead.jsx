@@ -1,22 +1,25 @@
 import "./imageHead.css";
-import Jelly from "../../assets/videos/jellyfish.mp4";
+
 import { Button, Col, Row } from "react-bootstrap";
 
-export const ImageHead = () => {
+export const ImageHead = ({ backgroundImage, video }) => {
   return (
-    <div className="imageHead">
+    <div
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+    >
       <Row style={{ minHeight: "70vh" }}>
         <Col className="d-flex justify-content-center align-items-center">
-          <div className="d-flex p-5 flex-column justify-content-center align-items-center">
+          <div className="d-flex gap-2 p-5 flex-column justify-content-center align-items-center">
             <h2 className="text-white fs-1"> Home Of Football</h2>
             <Button className="">SHOP</Button>
           </div>
         </Col>
-        <Col>
-          {" "}
-          <div className="m-auto ">
+        <Col className="d-flex align-items-center justify-content-center">
+          <div>
             <video
-              src={Jelly}
+              src={video}
               width="600"
               height="400"
               autoPlay={true}
