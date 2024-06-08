@@ -1,8 +1,7 @@
 import { Featured } from "../../components/featured/Featured";
-import { CarouselSlider } from "../../components/homeComponents/CarouselSlider";
-import { SwiperSlider } from "../../components/homeComponents/swiperSlider/SwiperSlider";
+import { CarouselSlider } from "../../components/carouselSlider/CarouselSlider";
+import { SwiperSlider } from "../../components/swiperSlider/SwiperSlider";
 import { DefaultLayout } from "../../components/layouts/DefaultLayout";
-import { SaleBar } from "../../components/layouts/saleBar/SaleBar";
 import { NewAndTrending } from "../../components/newAndTrending/NewAndTrending";
 import { ShopByCategory } from "../../components/shopbyCategory/ShopByCategory";
 
@@ -12,7 +11,7 @@ const Home = () => {
       {/* <div className="min-vh-100">
        
       </div> */}
-      <SaleBar />
+
       {/* <TryBar /> */}
       <CarouselSlider />
       <Featured />

@@ -6,6 +6,7 @@ import SignIn from "./pages/signUp-signIn/SignIn";
 import { ToastContainer } from "react-toastify";
 import Dashboard from "./pages/dashboard/Dashboard";
 import { Womens } from "./pages/womens/Womens";
+import { Mens } from "./pages/mens/Mens";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/womens" element={<Womens />} />
+        <Route path="/mens" element={<Mens />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
 
