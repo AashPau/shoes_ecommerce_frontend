@@ -8,10 +8,11 @@ import { ImageHead } from "../../components/imageHead/ImageHead";
 import TopImageMen from "../../assets/images/Mens-VideoHeader-HomeOfFootball-d.jpg"; // Import the image directly
 import Jelly from "../../assets/videos/jellyfish.mp4";
 
+const title = "HOME OF FOOTBALL";
 export const Mens = () => {
   return (
     <DefaultLayout>
-      <ImageHead backgroundImage={TopImageMen} video={Jelly} />
+      <ImageHead backgroundImage={TopImageMen} video={Jelly} title={title} />
       <Featured />
       <SwiperSlider />
       <NewAndTrending />

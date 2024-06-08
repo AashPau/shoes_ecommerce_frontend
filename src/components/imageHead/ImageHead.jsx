@@ -2,7 +2,7 @@ import "./imageHead.css";
 
 import { Button, Col, Row } from "react-bootstrap";
 
-export const ImageHead = ({ backgroundImage, video }) => {
+export const ImageHead = ({ backgroundImage, video, title }) => {
   return (
     <div
       style={{
@@ -12,7 +12,7 @@ export const ImageHead = ({ backgroundImage, video }) => {
       <Row style={{ minHeight: "70vh" }}>
         <Col className="d-flex justify-content-center align-items-center">
           <div className="d-flex gap-2 p-5 flex-column justify-content-center align-items-center">
-            <h2 className="text-white fs-1"> Home Of Football</h2>
+            <h2 className="text-white fs-1 fw-bolder">{title}</h2>
             <Button className="">SHOP</Button>
           </div>
         </Col>
