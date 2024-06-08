@@ -8,8 +8,7 @@ export const ImageHead = ({ backgroundImage, video, title }) => {
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-        backgroundPosition: "center",
+        backgroundPosition: "left",
         backgroundSize: "cover",
       }}
     >
