@@ -7,6 +7,10 @@ export const ImageHead = ({ backgroundImage, video, title }) => {
     <div
       style={{
         backgroundImage: `url(${backgroundImage})`,
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       <Row style={{ minHeight: "70vh" }}>
