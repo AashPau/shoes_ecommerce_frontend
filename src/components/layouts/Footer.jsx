@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import "./Footer.css";
 
 export const Footer = () => {
@@ -6,14 +6,35 @@ export const Footer = () => {
     <div className="bg-black py-4">
       <Container>
         <div className="text-center text-white g-2 p-3">
-          <div className="d-flex align-items-center gap-2 justify-content-around">
-            <div className="border footerBoxesBg p-3">Contact Us</div>
-            <div className="border footerBoxesBg p-3">Order Status</div>
-            <div className="border footerBoxesBg p-3">Shipping & Delivery</div>
-            <div className="border footerBoxesBg p-3">Store Finder</div>
-            <div className="border footerBoxesBg p-3">Returns & Refunds</div>
-            <div className="border footerBoxesBg p-3">Help Center</div>
-          </div>
+          <Row
+            md={6}
+            className="d-flex align-items-center justify-content-around gap-2"
+          >
+            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
+              <img src="/src/assets/images/icons/contact.svg" />
+              <p>Contact Us</p>
+            </Col>
+            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
+              <img src="/src/assets/images/icons/parcel.svg" />
+              <p>Order Status</p>
+            </Col>
+            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
+              <img src="/src/assets/images/icons/delivery.svg" />
+              <p>Shipping & Delivery</p>
+            </Col>
+            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
+              <img src="/src/assets/images/icons/store.svg" />
+              <p>Store Finder</p>
+            </Col>
+            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
+              <img src="/src/assets/images/icons/return.svg" />
+              <p>Returns & Refunds</p>
+            </Col>
+            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
+              <img src="/src/assets/images/icons/help.svg" />
+              <p>Help Center</p>
+            </Col>
+          </Row>
           <div className="d-flex text-start mt-4 p-3 gap-5">
             <div>
               <div className="fw-bolder"> Legal Information</div>

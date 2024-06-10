@@ -1,3 +1,4 @@
 .footerBoxesBg {
   background-color: #292929;
+  box-sizing: content-box;
 }
