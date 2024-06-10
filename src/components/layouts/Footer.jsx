@@ -1,4 +1,4 @@
-import { Accordion, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./Footer.css";
 
 export const Footer = () => {
@@ -14,26 +14,24 @@ export const Footer = () => {
             <div className="border footerBoxesBg p-3">Returns & Refunds</div>
             <div className="border footerBoxesBg p-3">Help Center</div>
           </div>
-          <div className="d-flex align-items-start flex-column text-start">
+          <div className="d-flex text-start mt-4 p-3 gap-5">
             <div>
-              <div>
-                <div> Legal Information</div>
-                <ul>
-                  <li>Terms $ Conditions</li>
-                  <li>Promotion Terms & Conditions </li>
-                  <li>Privacy Policy </li>
-                  <li>Cookie Seetings</li>
-                </ul>
-              </div>
-              <div>
-                <div>About</div>
-                <ul>
-                  <li>Store Locator</li>
-                  <li>All Stores</li>
-                  <li>About Foot Locker</li>
-                  <li>Careers</li>
-                </ul>
-              </div>
+              <div className="fw-bolder"> Legal Information</div>
+              <ul className="list-unstyled">
+                <li>Terms $ Conditions</li>
+                <li>Promotion Terms & Conditions </li>
+                <li>Privacy Policy </li>
+                <li>Cookie Seetings</li>
+              </ul>
+            </div>
+            <div>
+              <div className="fw-bolder">About</div>
+              <ul className="list-unstyled">
+                <li>Store Locator</li>
+                <li>All Stores</li>
+                <li>About Foot Locker</li>
+                <li>Careers</li>
+              </ul>
             </div>
           </div>
           <div>
