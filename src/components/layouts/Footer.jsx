@@ -6,33 +6,42 @@ export const Footer = () => {
     <div className="bg-black py-4">
       <Container>
         <div className="text-center text-white g-2 p-3">
-          <Row
-            md={6}
-            className="d-flex align-items-center justify-content-around gap-2"
-          >
-            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
-              <img src="/src/assets/images/icons/contact.svg" />
-              <p>Contact Us</p>
+          <Row className="d-flex gap-2">
+            <Col className="d-flex border rounded p-3 md-2 ">
+              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                <img src="/src/assets/images/icons/contact.svg" />
+                <p>Contact Us</p>
+              </div>
             </Col>
-            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
-              <img src="/src/assets/images/icons/parcel.svg" />
-              <p>Order Status</p>
+            <Col className="d-flex border rounded p-3 md-2">
+              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                <img src="/src/assets/images/icons/parcel.svg" />
+                <p>Order Status</p>
+              </div>
             </Col>
-            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
-              <img src="/src/assets/images/icons/delivery.svg" />
-              <p>Shipping & Delivery</p>
+            <Col className="d-flex border rounded p-3 md-2 ">
+              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                <img src="/src/assets/images/icons/delivery.svg" />
+                <p>Shipping & Delivery</p>
+              </div>
             </Col>
-            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
-              <img src="/src/assets/images/icons/store.svg" />
-              <p>Store Finder</p>
+            <Col className="d-flex border rounded p-3 md-2 ">
+              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                <img src="/src/assets/images/icons/store.svg" />
+                <p>Store Finder</p>
+              </div>
             </Col>
-            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
-              <img src="/src/assets/images/icons/return.svg" />
-              <p>Returns & Refunds</p>
+            <Col className="d-flex border rounded p-3 md-2 ">
+              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                <img src="/src/assets/images/icons/return.svg" />
+                <p>Returns & Refunds</p>
+              </div>
             </Col>
-            <Col className="border footerBoxesBg p-3 md-2 flex-grow-1">
-              <img src="/src/assets/images/icons/help.svg" />
-              <p>Help Center</p>
+            <Col className="d-flex border rounded p-3 md-2 ">
+              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                <img src="/src/assets/images/icons/help.svg" />
+                <p>Help Center</p>
+              </div>
             </Col>
           </Row>
           <div className="d-flex text-start mt-4 p-3 gap-5">
