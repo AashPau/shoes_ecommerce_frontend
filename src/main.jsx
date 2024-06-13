@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
+import "../node_modules/swiper/swiper-bundle.min.css";
+import "../node_modules/swiper/swiper.min.css";
 import store from "../src/redux-store/store.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
