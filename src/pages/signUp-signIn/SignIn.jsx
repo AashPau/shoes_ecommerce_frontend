@@ -80,6 +80,15 @@ const SignIn = () => {
               <div>
                 <Button type="submit">Submit</Button>
               </div>
+              <div className="d-flex mt-2">
+                Don't have a account. SignUp
+                <div
+                  onClick={() => navigate("/signup")}
+                  className="pointer text-primary"
+                >
+                  &nbsp;here.
+                </div>
+              </div>
             </Form>
           </Col>
         </Row>

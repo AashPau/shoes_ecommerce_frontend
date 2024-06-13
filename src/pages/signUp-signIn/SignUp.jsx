@@ -5,9 +5,11 @@ import { postNewUser } from "../../helper/userAxios";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { setForm } from "./formSlice";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { form } = useSelector((state) => state.formInfo);
   const inputs = [
     {
@@ -83,6 +85,15 @@ const SignUp = () => {
               ))}
               <div>
                 <Button type="submit">Submit</Button>
+              </div>
+              <div className="d-flex mt-2">
+                Already have a account. SignIn
+                <div
+                  onClick={() => navigate("/signin")}
+                  className="pointer text-primary"
+                >
+                  &nbsp;here.
+                </div>
               </div>
             </Form>
           </Col>
