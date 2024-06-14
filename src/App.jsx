@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import Dashboard from "./pages/dashboard/Dashboard";
 import { Womens } from "./pages/womens/Womens";
 import { Mens } from "./pages/mens/Mens";
+import { HelpCenter } from "./pages/helpCenter/HelpCenter";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/mens" element={<Mens />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/helpcenter" element={<HelpCenter />} />
 
         {/* Private routes  */}
         <Route path="dashboard" element={<Dashboard />} />

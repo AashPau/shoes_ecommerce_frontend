@@ -9,7 +9,9 @@ export const TopBar = () => {
   return (
     <div className="md-6 d-flex justify-content-between bg-black text-white">
       <div className="d-flex gap-3 ps-1">
-        <div>Help Centre</div>
+        <div onClick={() => navigate("/helpcenter")} className="pointer">
+          Help Centre
+        </div>
         <div>Track My Order</div>
         <div>rebel Active</div>
         <div>rebel gift cards</div>
