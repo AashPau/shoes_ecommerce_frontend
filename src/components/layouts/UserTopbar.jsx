@@ -46,7 +46,7 @@ const sideLinks = [
   },
 ];
 
-export const UserSidebar = () => {
+export const UserTopbar = () => {
   const { user } = useSelector((state) => state.userInfo);
 
   const list =
@@ -55,12 +55,12 @@ export const UserSidebar = () => {
       : sideLinks.filter((itm) => !itm.isAdminOnly);
 
   return (
-    <Stack gap={1}>
+    <div className="d-flex gap-2">
       {list.map(({ title, to, icon }) => (
-        <Link key={title} to={to} className="p-2 nav-link">
+        <Link key={title} to={to} className="p-2 nav-link border rounded">
           {icon} {title}
         </Link>
       ))}
-    </Stack>
+    </div>
   );
 };

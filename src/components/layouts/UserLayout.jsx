@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { AuthRoute } from "../auth/AuthRoute";
-import { UserSidebar } from "./UserSidebar";
+import { UserTopbar } from "./UserTopbar";
 
 export const UserLayout = ({ children, pageTitle }) => {
   const { user } = useSelector((state) => state.userInfo);
@@ -20,8 +20,10 @@ export const UserLayout = ({ children, pageTitle }) => {
                 <h3>{user.name}</h3>
               </div>
               <hr />
-              <UserSidebar />
+              <UserTopbar />
             </Col>
+          </Row>
+          <Row>
             <Col>
               <div className="p-2">{pageTitle}</div>
               <hr />

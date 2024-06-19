@@ -1,9 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <div className="bg-black py-4">
+    <div className="bg-dark py-4">
       <Container>
         <div className="text-center text-white g-2 p-3">
           <Row className="d-flex gap-2">
@@ -38,10 +39,15 @@ export const Footer = () => {
               </div>
             </Col>
             <Col className="d-flex border rounded p-3 md-2 ">
-              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
-                <img src="/src/assets/images/icons/help.svg" />
-                <p>Help Center</p>
-              </div>
+              <Link
+                to={"/helpcenter"}
+                className="text-decoration-none text-white"
+              >
+                <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                  <img src="/src/assets/images/icons/help.svg" />
+                  <p>Help Center</p>
+                </div>
+              </Link>
             </Col>
           </Row>
           <div className="d-flex text-start mt-4 p-3 gap-5">
