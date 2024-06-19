@@ -2,53 +2,58 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
+const footerLinks = [
+  {
+    title: "Contact Us",
+    imageUrl: "/src/assets/images/icons/contact.svg",
+    linkUrl: "/helpcenter",
+  },
+  {
+    title: "Order Status",
+    imageUrl: "/src/assets/images/icons/parcel.svg",
+    linkUrl: "/helpcenter",
+  },
+  {
+    title: "Shipping & Delivery",
+    imageUrl: "/src/assets/images/icons/delivery.svg",
+    linkUrl: "/helpcenter",
+  },
+  {
+    title: "Store Finder",
+    imageUrl: "/src/assets/images/icons/store.svg",
+    linkUrl: "/helpcenter",
+  },
+  {
+    title: "Returns & Refunds",
+    imageUrl: "/src/assets/images/icons/return.svg",
+    linkUrl: "/helpcenter",
+  },
+  {
+    title: "Help Center",
+    imageUrl: "/src/assets/images/icons/help.svg",
+    linkUrl: "/helpcenter",
+  },
+];
+
 export const Footer = () => {
   return (
     <div className="bg-dark py-4">
       <Container>
         <div className="text-center text-white g-2 p-3">
           <Row className="d-flex gap-2">
-            <Col className="d-flex border rounded p-3 md-2 ">
-              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
-                <img src="/src/assets/images/icons/contact.svg" />
-                <p>Contact Us</p>
-              </div>
-            </Col>
-            <Col className="d-flex border rounded p-3 md-2">
-              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
-                <img src="/src/assets/images/icons/parcel.svg" />
-                <p>Order Status</p>
-              </div>
-            </Col>
-            <Col className="d-flex border rounded p-3 md-2 ">
-              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
-                <img src="/src/assets/images/icons/delivery.svg" />
-                <p>Shipping & Delivery</p>
-              </div>
-            </Col>
-            <Col className="d-flex border rounded p-3 md-2 ">
-              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
-                <img src="/src/assets/images/icons/store.svg" />
-                <p>Store Finder</p>
-              </div>
-            </Col>
-            <Col className="d-flex border rounded p-3 md-2 ">
-              <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
-                <img src="/src/assets/images/icons/return.svg" />
-                <p>Returns & Refunds</p>
-              </div>
-            </Col>
-            <Col className="d-flex border rounded p-3 md-2 ">
-              <Link
-                to={"/helpcenter"}
-                className="text-decoration-none text-white"
-              >
+            {footerLinks.map((item, i) => (
+              <Col key={i} className="d-flex border rounded p-3 md-2 ">
                 <div className="footerBoxesBg d-flex flex-column flex-grow-1 align-items-center justify-content-center">
-                  <img src="/src/assets/images/icons/help.svg" />
-                  <p>Help Center</p>
+                  <Link
+                    to={item.linkUrl}
+                    className="text-decoration-none text-white "
+                  >
+                    <img src={item.imageUrl} />
+                    <p>{item.title}</p>
+                  </Link>
                 </div>
-              </Link>
-            </Col>
+              </Col>
+            ))}
           </Row>
           <div className="d-flex text-start mt-4 p-3 gap-5">
             <div>
