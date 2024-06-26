@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { AuthRoute } from "../auth/AuthRoute";
-import { UserTopbar } from "./UserTopbar";
+import { UserTopBar } from "./UserTopBar.jsx";
 
 export const UserLayout = ({ children, pageTitle }) => {
   const { user } = useSelector((state) => state.userInfo);
@@ -12,25 +12,27 @@ export const UserLayout = ({ children, pageTitle }) => {
       <div>
         {/* header  */}
         <Header />
-        <Container fluid>
-          <Row>
-            <Col xs={3} className="bg-dark text-light">
-              <div className="p-3 text-center">
-                <div>Welcome Back</div>
-                <h3>{user.name}</h3>
+
+        <div className="d-flex flex-column bg-dark text-light">
+          <div className="p-3 text-center">
+            <div>Welcome Back</div>
+            <h3>{user.name}</h3>
+          </div>
+          <hr />
+          <UserTopBar />
+        </div>
+
+        <div className="">
+          {pageTitle ? (
+            <>
+              <div className="p-2">
+                {pageTitle}
+                <hr />
               </div>
-              <hr />
-              <UserTopbar />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <div className="p-2">{pageTitle}</div>
-              <hr />
-              <main className="main">{children}</main>
-            </Col>
-          </Row>
-        </Container>
+            </>
+          ) : null}
+          <main className="main">{children}</main>
+        </div>
 
         {/* footer  */}
         <Footer />
